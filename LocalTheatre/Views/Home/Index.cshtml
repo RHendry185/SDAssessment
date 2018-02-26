@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <img src="~/Content/lt.jpg" />
+    <p></p>
+    <p class="lead">Welcome to the Theatre of Glasgow website. Keep up to date here with all of our news and updates on activities we will be hosting </p>
+
+</div>
+ <div class="slider">
+     <div><img src="https://exeternorthcott.co.uk/wp-content/uploads/2017/06/James-Wilton-Web-Banner-900x300.jpg" /></div>
+     <div><img src="https://bluemousetheatre.com/media/DSC_4883-900x300.jpg" /></div>
+     <div><img src="http://spballet.net/wp-content/uploads/2017/08/IMG_1209-900x300.jpg" /></div>
+ </div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            you can take a look at the posts, sign up or log in to be able to comment on posts
+        </p>
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h2>upcoming events</h2>
+        <p>head to out posts page to see all the upcoming events</p>
+        <p></p>
+    </div>
+    <div class="col-md-4">
+        <h2>special offers</h2>
+        <p>there are also special offers, for more information ask the LocalTheatre staff</p>
+        <p></p>
+    </div>
+</div>
+
+<script>
+$(".slider").slick({
+
+  // normal options...
+  infinite: false,
+
+  // the magic
+  responsive: [{
+
+      adaptiveheight: true,
+      infinite: true,
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        infinite: true
+      }
+
+    }, {
+
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        dots: true
+      }
+
+    }, {
+
+      breakpoint: 300,
+      settings: "unslick" // destroys slick
+
+    }]
+});
+</script>
