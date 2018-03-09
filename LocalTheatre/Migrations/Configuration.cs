@@ -111,7 +111,7 @@ namespace LocalTheatre.Migrations
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
 
-            //default user created   
+            //creation of a default user
 
             var user = new ApplicationUser();
             user.UserName = "rhendry185@gmail.com";
@@ -131,7 +131,7 @@ namespace LocalTheatre.Migrations
                 roleManager.Create(role);
             }
 
-            //Then create an admin user                
+            //creation of an admin user                
 
             var adminuser = new ApplicationUser();
             adminuser.UserName = "Admin";
@@ -149,7 +149,7 @@ namespace LocalTheatre.Migrations
             }
 
 
-            // create a second role  
+            // creation of a second role  
             if (!roleManager.RoleExists("User"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
