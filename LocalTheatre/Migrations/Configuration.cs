@@ -113,13 +113,7 @@ namespace LocalTheatre.Migrations
 
             //creation of a default user
 
-            var user = new ApplicationUser();
-            user.UserName = "rhendry185@gmail.com";
-            user.Email = "rhendry185@gmail.com";
-
-            string userPWD = "letmein";
-
-            UserManager.Create(user, userPWD);
+            
             // creation an admin role 
 
             if (!roleManager.RoleExists("Admin"))
@@ -134,10 +128,10 @@ namespace LocalTheatre.Migrations
             //creation of an admin user                
 
             var adminuser = new ApplicationUser();
-            adminuser.UserName = "Admin";
+            adminuser.UserName = "admin@localtheatre.com";
             adminuser.Email = "admin@localtheatre.com";
 
-            userPWD = "Admin_123!";
+            String userPWD = "Admin_123!";
 
             var chkUser = UserManager.Create(adminuser, userPWD);
 

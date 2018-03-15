@@ -1,4 +1,4 @@
-﻿@model LocalTheatre.Models.Post
+﻿@model LocalTheatre.Models.BlogPost
 
 @{
     ViewBag.Title = "Details";
@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.UserName)
+            @Html.DisplayNameFor(model => model.Author)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.UserName)
+            @Html.DisplayFor(model => model.Author)
         </dd>
 
         <dt>
@@ -27,11 +27,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PostDesc)
+            @Html.DisplayNameFor(model => model.PostText)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PostDesc)
+            @Html.DisplayFor(model => model.PostText)
         </dd>
 
         <dt>
@@ -46,10 +46,10 @@
     <div>
         @foreach (var item in Model.Comments)
         {
-            <div>@item.CommentBody</div>
+            <div>@item.CommentText</div>
             <div>
                 <label>by</label>
-                <label>@item.UserName</label>
+                <label>@item.Author</label>
                 <label> on </label>
                 <label>@item.CommentDate</label>
             </div>

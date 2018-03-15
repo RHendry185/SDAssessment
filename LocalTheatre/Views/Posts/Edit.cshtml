@@ -1,4 +1,4 @@
-﻿@model LocalTheatre.Models.Post
+﻿@model LocalTheatre.Models.BlogPost
 
 @{
     ViewBag.Title = "Edit";
@@ -26,10 +26,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PostDesc, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.PostText, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PostDesc, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PostDesc, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.PostText, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PostText, "", new { @class = "text-danger" })
             </div>
         </div>
 
